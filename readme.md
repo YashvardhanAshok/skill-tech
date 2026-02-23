@@ -1,90 +1,51 @@
-<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hey! Nice meet You..</h1>
+# AI Job Auto-Apply System
 
 <p>
-I'm <strong>Yashvardhan.</strong><br>
-Full Stack Developer focused on Python, scalable backends, and applied AI solutions. why not explore more of my work in my 
-<a href="https://yashvardhanashok.github.io/profile/">portfolio</a>.
-
-</p>
-
-<h3>Here Are My Top Skils</h3>
-<p>
-  <img src="https://skillicons.dev/icons?i=git,html,js,css,cpp,docker,sqlite,mysql,python,nodejs,flask,github,githubactions,pytorch,matlab,blender," />
-</p>
-
-<h3>Check Out My Experimentals </h3>
-
-<table width="100%" cellpadding="0" cellspacing="0" style="border:none;">
-<tr>
-
-<td width="50%" valign="top" style="border:none;">
-<br>
-<p>
-    <a href=""><img src="sorce/AUTO-APPLY.png"></a>
-    <strong>AUTO-APPLY</strong> - <a href=""><span>GitHub</span></a><br>
-    Python, Selenium, SQL, Olama Developed an Al-based application that
-    automatica ly searches and applies for relevant job openings on platforms like LinkedIn and Naukri. The system
-    generates customized, ATS-friendly resumes and cover letters using LLMs and maintains application records in a
-    SQL database.
+This repository contains a limited version of the AI Job Auto-Apply System, focused on the resume creation and document generation features. The full automation platform remains private. You can access the live tool here: [Add your website link here].
 </p>
 
 <p>
-    <a href=""><img src="sorce/FRIDAY.png"></a>
-    <strong>Friday & Cortana Lite</strong> - <a href=""><span>GitHub</span></a><br>
-    Built Friday & Cortana Lite for Power Grid Corporation of India Ltd., developing AI-driven web and desktop tools to handle large volumes of documents, automate workflows, and enable easy data access for non-technical users.
+The AI Job Auto-Apply System is an automation platform that discovers relevant job openings, analyses their requirements, generates tailored application documents, and applies automatically across multiple job portals. The system combines browser automation, structured storage, and locally hosted language models to streamline large-scale job searching.
 </p>
 
-<p>
-    <a href="https://github.com/YashvardhanAshok/Tender-Hunt"><img src="sorce/ATF.png"></a>
-    <strong>AUTO-APPLY</strong> - <a href="https://github.com/YashvardhanAshok/Tender-Hunt"><span>GitHub</span></a><br>
-    Tender Hunt and ATF automate tender searches, streamlining employee tasks. ATF scans 12 websites, like Gem and Coal India. Tender Hunt, the project's front end, uses HTML, CSS, and JavaScript for a user-friendly interface. It lets employees set criteria, boosting overall user experience.
-</p>
-<br>
-</td>
+## Project Overview
+This application continuously scans platforms such as LinkedIn, Naukri, and Apna to detect recent job openings matching configured keywords. It evaluates each job description, prepares tailored documents, and proceeds with automated or assisted applications. The system is designed to function both as a fully automated pipeline and as a decision-support tool for manual applications, typically processing 100–250 listings per run.
 
-<td width="50%" valign="top" style="border:none;">
-<br>
-<p>
-    <a href="https://github.com/YashvardhanAshok/MinorProject--Smart_Store_System"><img src="sorce/LUNA.png"></a>
-    <strong>Smart Store System</strong> - <a href="https://github.com/YashvardhanAshok/MinorProject--Smart_Store_System"><span>GitHub</span></a><br>
-    This project is a comprehensive Smart Store System that uses a Python-based backend and a web-based frontend for managing inventory, enhancing user experience, and simplifying payment processes. The system is designed to automate store-side operations and offer customers a seamless shopping experience with minimal manual intervention
-</p>
+## System Flow
 
-<p>
-    <a href=""><img src="sorce/HomeLab.png"></a>
-    <strong>HomeLab</strong> - <a href=""><span>GitHub</span></a><br>
-    I built a self-hosted server environment to deploy, test, and manage applications locally in a production-like setup. I configured custom local domains, reverse proxy routing, and HTTPS certificates to securely host multiple internal services and dashboards. The lab serves as a sandbox for experimenting with automation scripts, web apps, networking configurations, and system deployments, helping me gain hands-on expergience with real-world infrastructure and DevOps practices.
-</p>
+The first stage collects structured job data from supported portals using browser automation. It captures job descriptions, company information, metadata, and application requirements.
 
-<p>
-    <a href="https://github.com/YashvardhanAshok/Railway-Management-System"><img src="sorce/Railx.png"></a>
-    <strong>Railway-Management-System</strong> - <a href="https://github.com/YashvardhanAshok/Railway-Management-System"><span>GitHub</span></a><br>
-    About The Railway Management System, also known as RailX, was developed during my 6th semester in college as part of the Software Project Management (SPM) course. Despite being a mini-project, IT IS LICENSE WITH NPOL.
-</p>
-<br>
-</td>
+The second stage focuses on intelligent processing. Locally hosted language models analyse job descriptions, generate ATS-friendly resumes and cover letters, fill missing fields, and score relevance before applying. Walk-in drives are detected automatically, and their details are stored as structured JSON for reuse.
 
-</tr>
-</table>
+The final stage handles persistence and tracking. All job records, generated resumes, and application statuses are stored in SQL, enabling filtering, analytics, and historical tracking.
 
-<h3>Want to reach me?</h3>
+## Manual Assistance Layer
 
-<p>
-If you’ve got an idea, opportunity, or just enjoy building cool things - I’m always open to a conversation.<br>
-<a href="mailto:yashvardhan577@gmail.com">
-  <img src="https://skillicons.dev/icons?i=gmail" />
-</a>
-<a href="https://www.linkedin.com/in/yashvardhan-ashok/">
-  <img src="https://skillicons.dev/icons?i=linkedin" />
-</a>
-</p>
+Alongside automation, the system offers a manual workflow where users can review generated resumes, modify documents, and apply selectively. A smart filtering engine ranks listings by relevance and consolidates them into a manageable queue.
+
+## Technology Stack
+
+### Core Technologies <br>
+<img height="40" src="https://skillicons.dev/icons?i=selenium,git,html,js,css,python,flask,sqlite,mysql,docker,github,githubactions" />
+
+### Additional Components
+
+The following tools are used but do not have official SkillIcons representations:
+
+- Ollama for hosting local language models
+- Local LLMs (e.g., Gemma family) for document generation and JD analysis
+- SQL-based tracking layer for application history and analytics
+- Selenium for browser automation and scraping
+
+## Supported LLMs
+| Model               | Hosting | Usage                                          |
+| ------------------- | ------- | ---------------------------------------------- |
+| Gemma        | Ollama / Cloud  | Resume generation, JD scoring, form completion |
+| Lama         | Ollama  | Resume generation, JD scoring, form completion |
+
+## Configuration
+Users can configure job keywords, posting time windows, supported platforms, model selection, resume templates, and application limits. This makes the system adaptable to different job markets and search strategies.
 
 
-
-
-<hr>
-<p align="center">
-<strong>I don’t just build projects - I build systems that work.</strong><br>
-<sub>Last Updated: FEB, 20 2026</sub>
-</p>
-<hr>
+## Disclaimer
+This project is intended for educational and productivity purposes. Users should ensure compliance with the terms of service of any platform they automate.
