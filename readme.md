@@ -1,11 +1,11 @@
 ## AI Job Auto-Apply System
 
 <p>
-This repository contains a limited public version of the AI Job Auto-Apply System, mainly showcasing the resume generation and document workflow. The full automation platform remains private. You can access the live tool here: [Add your website link here].
+This repository contains a limited public version of the AI Job Auto-Apply System, mainly showcasing the resume generation and document workflow. The full automation platform remains private. You can access the live tool by 
+<a href="https://yashvardhanashok.github.io/skill-tech/SkillSnap" target="_blank">clicking here</a>.
 <br>
 The AI Job Auto-Apply System automatically finds relevant job openings, generates tailored application documents, and helps streamline large-scale job searching using automation, structured storage, and locally hosted language models.
 </p>
-
 
 ## Supported Platforms
 
@@ -15,8 +15,8 @@ The system supports multiple job platforms across web and mobile environments. F
 
 | Platform                                         | AUTO | Manual |
 | :----------------------------------------------- | :--: | :----: |
-| LinkedIn, Naukri, Indeed, Apna (Web/Android App) |  YES |   YES  |
-| Wellfound                                        |  NO  |   YES  |
+| LinkedIn, Naukri, Indeed, Apna (Web/Android App) | YES  |  YES   |
+| Wellfound                                        |  NO  |  YES   |
 
 ---
 
@@ -35,6 +35,7 @@ Alongside automation, the system offers a manual workflow where users can review
 ## Technology Stack
 
 ### Core Technologies <br>
+
 <img height="40" src="https://skillicons.dev/icons?i=selenium,git,html,js,css,python,flask,sqlite,mysql,docker,github,githubactions" />
 
 ### Additional Components
@@ -47,15 +48,16 @@ The following tools are used but do not have official SkillIcons representations
 - Selenium for browser automation and scraping
 
 ## Supported LLMs
-| Model               | Hosting | Usage                                          |
-| ------------------- | ------- | ---------------------------------------------- |
-| Gemma        | Ollama / Cloud  | Resume generation, JD scoring, form completion |
-| Lama         | Ollama  | Resume generation, JD scoring, form completion |
+
+| Model | Hosting        | Usage                                          |
+| ----- | -------------- | ---------------------------------------------- |
+| Gemma | Ollama / Cloud | Resume generation, JD scoring, form completion |
+| Lama  | Ollama         | Resume generation, JD scoring, form completion |
 
 ## Configuration
+
 Users can configure job keywords, posting time windows, supported platforms, model selection, resume templates, and application limits. This makes the system adaptable to different job markets and search strategies.
 
-
 ## Disclaimer
-This project is intended for educational and productivity purposes. Users should ensure compliance with the terms of service of any platform they automate.
 
+This project is intended for educational and productivity purposes. Users should ensure compliance with the terms of service of any platform they automate.
