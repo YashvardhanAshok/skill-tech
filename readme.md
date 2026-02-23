@@ -27,7 +27,7 @@ The final stage handles persistence and tracking. All job records, generated res
 
 Alongside automation, the system offers a manual workflow where users can review generated resumes, modify documents, and apply selectively. A smart filtering engine ranks listings by relevance and consolidates them into a manageable queue.
 
-
+![alt text](sorce/manval.gif)
 
 ## Technology Stack
 
