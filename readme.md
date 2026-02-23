@@ -11,9 +11,13 @@ The AI Job Auto-Apply System is an automation platform that discovers relevant j
 ## Project Overview
 This application continuously scans platforms such as LinkedIn, Naukri, and Apna to detect recent job openings matching configured keywords. It evaluates each job description, prepares tailored documents, and proceeds with automated or assisted applications. The system is designed to function both as a fully automated pipeline and as a decision-support tool for manual applications, typically processing 100–250 listings per run.
 
+![alt text](sorce/applying.gif)
+
 ## System Flow
 
 The first stage collects structured job data from supported portals using browser automation. It captures job descriptions, company information, metadata, and application requirements.
+
+![alt text](sorce/resume.gif)
 
 The second stage focuses on intelligent processing. Locally hosted language models analyse job descriptions, generate ATS-friendly resumes and cover letters, fill missing fields, and score relevance before applying. Walk-in drives are detected automatically, and their details are stored as structured JSON for reuse.
 
@@ -22,6 +26,8 @@ The final stage handles persistence and tracking. All job records, generated res
 ## Manual Assistance Layer
 
 Alongside automation, the system offers a manual workflow where users can review generated resumes, modify documents, and apply selectively. A smart filtering engine ranks listings by relevance and consolidates them into a manageable queue.
+
+
 
 ## Technology Stack
 
@@ -49,3 +55,4 @@ Users can configure job keywords, posting time windows, supported platforms, mod
 
 ## Disclaimer
 This project is intended for educational and productivity purposes. Users should ensure compliance with the terms of service of any platform they automate.
+
