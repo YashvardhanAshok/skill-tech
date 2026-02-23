@@ -1,48 +1,28 @@
-# AI Job Auto-Apply System
+## AI Job Auto-Apply System
 
 <p>
-This repository contains a limited version of the AI Job Auto-Apply System, focused on the resume creation and document generation features. The full automation platform remains private. You can access the live tool here: [Add your website link here].
+This repository contains a limited public version of the AI Job Auto-Apply System, mainly showcasing the resume generation and document workflow. The full automation platform remains private. You can access the live tool here: [Add your website link here].
+<br>
+The AI Job Auto-Apply System automatically finds relevant job openings, generates tailored application documents, and helps streamline large-scale job searching using automation, structured storage, and locally hosted language models.
 </p>
 
-<p>
-The AI Job Auto-Apply System is an automation platform that discovers relevant job openings, analyses their requirements, generates tailored application documents, and applies automatically across multiple job portals. The system combines browser automation, structured storage, and locally hosted language models to streamline large-scale job searching.
-</p>
-
-## Project Overview
-
-This application continuously scans platforms such as LinkedIn, Naukri, and Apna to detect recent job openings matching configured keywords. It evaluates each job description, prepares tailored documents, and proceeds with automated or assisted applications. The system is designed to function both as a fully automated pipeline and as a decision-support tool for manual applications, typically processing 100–250 listings per run.
-
-![alt text](sorce/applying.gif)
 
 ## Supported Platforms
 
-<table style="width:100%; text-align:center; border-collapse:collapse;">
-  <thead>
-    <tr>
-      <th style="padding:8px; border:1px solid #ddd;">Platform</th>
-      <th style="padding:8px; border:1px solid #ddd;">AUTO</th>
-      <th style="padding:8px; border:1px solid #ddd;">Manual</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td style="padding:8px; border:1px solid #ddd;">LinkedIn</td><td>YES</td><td>YES</td></tr>
-    <tr><td style="padding:8px; border:1px solid #ddd;">Naukri</td><td>YES</td><td>NO</td></tr>
-    <tr><td style="padding:8px; border:1px solid #ddd;">Apna (Web)</td><td>YES</td><td>YES</td></tr>
-    <tr><td style="padding:8px; border:1px solid #ddd;">Apna (Android App)</td><td>YES</td><td>YES</td></tr>
-    <tr><td style="padding:8px; border:1px solid #ddd;">Wellfound</td><td>NO</td><td>YES</td></tr>
-    <tr><td style="padding:8px; border:1px solid #ddd;">Indeed</td><td>YES</td><td>YES</td></tr>
-  </tbody>
-</table>
+The system supports multiple job platforms across web and mobile environments. For platforms where automation is permitted, the application can automatically discover listings, generate documents, and submit applications. For others, it assists users by preparing tailored resumes, extracting key job data, and guiding the manual application process.
 
-## System Flow
+![alt text](sorce/applying.gif)
 
-The first stage collects structured job data from supported portals using browser automation. It captures job descriptions, company information, metadata, and application requirements.
+| Platform                                         | AUTO | Manual |
+| :----------------------------------------------- | :--: | :----: |
+| LinkedIn, Naukri, Indeed, Apna (Web/Android App) |  YES |   YES  |
+| Wellfound                                        |  NO  |   YES  |
 
-The second stage focuses on intelligent processing. Locally hosted language models analyse job descriptions, generate ATS-friendly resumes and cover letters, fill missing fields, and score relevance before applying. Walk-in drives are detected automatically, and their details are stored as structured JSON for reuse.
-
-The final stage handles persistence and tracking. All job records, generated resumes, and application statuses are stored in SQL, enabling filtering, analytics, and historical tracking.
+---
 
 ## Resume Creation And Mangment
+
+The system includes an intelligent resume generation pipeline that creates job-specific, ATS-friendly resumes based on the job description. Each generated resume is stored, versioned, and linked to its corresponding job entry, allowing users to review, edit, reuse, or export documents at any time through the interface.
 
 ![alt text](sorce/resume.gif)
 
@@ -55,7 +35,6 @@ Alongside automation, the system offers a manual workflow where users can review
 ## Technology Stack
 
 ### Core Technologies <br>
-
 <img height="40" src="https://skillicons.dev/icons?i=selenium,git,html,js,css,python,flask,sqlite,mysql,docker,github,githubactions" />
 
 ### Additional Components
@@ -68,16 +47,15 @@ The following tools are used but do not have official SkillIcons representations
 - Selenium for browser automation and scraping
 
 ## Supported LLMs
-
-| Model | Hosting        | Usage                                          |
-| ----- | -------------- | ---------------------------------------------- |
-| Gemma | Ollama / Cloud | Resume generation, JD scoring, form completion |
-| Lama  | Ollama         | Resume generation, JD scoring, form completion |
+| Model               | Hosting | Usage                                          |
+| ------------------- | ------- | ---------------------------------------------- |
+| Gemma        | Ollama / Cloud  | Resume generation, JD scoring, form completion |
+| Lama         | Ollama  | Resume generation, JD scoring, form completion |
 
 ## Configuration
-
 Users can configure job keywords, posting time windows, supported platforms, model selection, resume templates, and application limits. This makes the system adaptable to different job markets and search strategies.
 
-## Disclaimer
 
+## Disclaimer
 This project is intended for educational and productivity purposes. Users should ensure compliance with the terms of service of any platform they automate.
+
