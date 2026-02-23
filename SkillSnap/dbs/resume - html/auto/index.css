@@ -1,0 +1,91 @@
+
+body {
+  font-family: Arial, sans-serif;
+  font-family: "Aptos", sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 20px;
+  background: #fff;
+  line-height: 1.5;
+}
+.container {
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 5px;
+}
+
+.entry {
+  margin-bottom: 0px;
+}
+
+.entry-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.entry-subtitle {
+  font-size: 14px;
+  font-style: italic;
+  color: #555;
+}
+
+.duration {
+  float: right;
+  font-size: 14px;
+  color: rgb(0, 58, 110);
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+p {
+  margin-top: 0px;
+}
+
+h2 {
+  color: rgb(0, 58, 110);
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+.highlight,
+h4 {
+  color: rgb(0, 58, 110);
+}
+
+.titel_bar {
+  padding-bottom: 3px;
+  padding-top: 0px;
+  padding-left: 0;
+  border-bottom: 3px solid rgba(8, 71, 125, 0.958);
+  border-top: 1px solid white;
+  background-color: white;
+  color: rgb(3, 46, 83);
+  line-height: 1;
+}
+
+/* new  */
+/* head_title - heading */
+/* summary_paragrph */
+.head_title {
+  color: rgb(0, 58, 110);
+  font-weight: bolder;
+}
+
+.summary_paragrph {
+  padding: 3px 0px;
+}

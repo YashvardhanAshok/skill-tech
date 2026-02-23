@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SkillSnap 2.3</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="nav">
+      <div class="left_nav"><h2>SkillSnap</h2></div>
+      <div class="right_nav">
+        <div id="menu" class="menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box_menu">
+        <div class="left_menu">
+          <input type="text" class="surch_list" placeholder="Surch" />
+
+          <div class="_mail active">Message</div>
+          <div class="_auto">Resume</div>
+        </div>
+
+        <div class="right_menu">
+          <div class="resume_heading_box">
+            <input
+              type="text"
+              placeholder="No heading"
+              class="resume_heading"
+            />
+          </div>
+
+          <div id="save_as">Genrate Resume</div>
+          <div id="save-btn">Save</div>
+          <div id="export-btn">Export</div>
+          <div class="send_button">
+            <div class="send_m_rext">Send Message</div>
+            <div class="loading_contaner">
+              <div class="Send_text">Send</div>
+              <div class="loading_"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box_container">
+        <div class="left_box">
+          <div class="left_contaner">
+            <div class="email_list"></div>
+            <div class="resume_list"></div>
+          </div>
+        </div>
+
+        <div class="right_box">
+          <div class="email_and_ifram">
+            <div class="email_coverleter">
+              <div class="email_frame">
+                <div class="Email_Head">Email Head</div>
+                <div class="email_contener">
+                  <div class="email_to">
+                    To:
+                    <input type="text" id="email_to_input" value="Error" />
+                  </div>
+                  <div class="email_dev"></div>
+                  <div class="email_subject">
+                    Subject:
+                    <input type="text" id="email_subject_input" value="4O4" />
+                  </div>
+                  <div class="email_dev"></div>
+
+                  <div id="email_body" contenteditable="true">4o4</div>
+                </div>
+              </div>
+              <div class="cover_leter">
+                <div class="Email_Head">Cover letter</div>
+                <div class="coverleter_body" contenteditable="true"></div>
+              </div>
+            </div>
+            <div class="resume_contaner">
+              <div class="toolbar">
+                <!-- Text styling -->
+                <button onclick="execCmd('bold')"><b>B</b></button>
+                <button onclick="execCmd('italic')"><i>I</i></button>
+                <button onclick="execCmd('underline')"><u>U</u></button>
+
+                <!-- Alignment -->
+                <button onclick="execCmd('justifyLeft')" class="alinment left">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+                <button
+                  onclick="execCmd('justifyCenter')"
+                  class="alinment center"
+                >
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+                <button
+                  onclick="execCmd('justifyRight')"
+                  class="alinment right"
+                >
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+                <button
+                  onclick="execCmd('justifyFull')"
+                  class="alinment justify"
+                >
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <!-- Font size -->
+                <select onchange="execCmdArg('fontSize', this.value)">
+                  <option value="3">Font Size</option>
+                  <option value="1">Small</option>
+                  <option value="3">Normal</option>
+                  <option value="5">Large</option>
+                  <option value="7">Huge</option>
+                </select>
+
+                <!-- Font color -->
+                <input
+                  type="color"
+                  onchange="execCmdArg('foreColor', this.value)"
+                />
+
+                <!-- Background color -->
+                <input
+                  type="color"
+                  onchange="execCmdArg('hiliteColor', this.value)"
+                />
+                <button onclick="execCmd('insertUnorderedList')">•</button>
+                <button onclick="execCmd('insertOrderedList')">1</button>
+                <!-- Undo/Redo -->
+                <button onclick="genrate_responce()">ReGenrate</button>
+              </div>
+
+              <div class="ifram_box">
+                <iframe class="resume-frame" src="" scrolling="no"> </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="modal-backdrop">
+        <div class="form_card" role="dialog" aria-modal="true">
+          <h2>Genrate Resume</h2>
+
+          <form id="job-form">
+            <div>
+              <label for="patform_form">Platform</label>
+              <input
+                id="patform_form"
+                name="company_names"
+                type="text"
+                placeholder="Apna, linkedin"
+                value="Manval"
+              />
+            </div>
+            <div>
+              <label for="companies_form">Company Names</label>
+              <input
+                id="companies_form"
+                name="company_names"
+                type="text"
+                placeholder="Nagarro, Google"
+              />
+            </div>
+
+            <div>
+              <label for="Email_ID_form">Email ID</label>
+              <input
+                id="Email_ID_form"
+                type="text"
+                placeholder="XYZ@gmail.com"
+              />
+            </div>
+
+            <div>
+              <label for="Jd_discription_form">Job Description</label>
+              <textarea
+                id="Jd_discription_form"
+                placeholder="Details about the role you applying to.. "
+              ></textarea>
+            </div>
+
+            <div class="actions">
+              <button type="button" class="btn ghost" id="Close-but">
+                Close
+              </button>
+              <button type="button" class="btn primary" id="create_new_form">
+                Genrate Resume
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
